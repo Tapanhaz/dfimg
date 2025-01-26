@@ -1,7 +1,7 @@
 # dfimg
 Convert polars / pandas dataframe to image/ binary image. 
 
-## Installation
+## Installation ::
 
 For intallation use pip :
 
@@ -9,7 +9,7 @@ For intallation use pip :
 pip install dfimg
 ```
 
-##Functions
+## Functions ::
 
 dfimg provides the following functions:
 
@@ -87,7 +87,7 @@ send_img_to_telegram:
         img_name (optional): The name of the image file (without extension). Default is "sample".
         format (optional): The format of the image to send (e.g., "PNG", "JPEG"). Default is "PNG".
 
-## Example
+## Example ::
 
 ```python
 import polars as pl
@@ -154,5 +154,5 @@ send_img_to_telegram(
 
 ```
 
-##Sample Image
+## Example Image ::
 ![Example](img/image.png)

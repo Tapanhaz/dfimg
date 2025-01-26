@@ -7,7 +7,7 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/Tapanhaz/dfimg"
 repository = "https://github.com/Tapanhaz/dfimg"
-keywords = ["dataframe", "image", "pandas", "polars", "pillow", "scraping"]
+keywords = ["dataframe", "image", "pandas", "polars", "pillow"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
