@@ -1,0 +1,5 @@
+polars
+pandas
+pillow
+requests
+beautifulsoup4

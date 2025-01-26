@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "dfimg"
+version = "0.1.0"
+description = "A library to convert polars/ pandas dataframes to image."
+authors = ["Tapanhaz tapanhaz@gmail.com"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/Tapanhaz/dfimg"
+repository = "https://github.com/Tapanhaz/dfimg"
+keywords = ["dataframe", "image", "pandas", "polars", "pillow", "scraping"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+polars = "*"
+pandas = "*"
+pillow = "*"
+requests = "*"
+beautifulsoup4 = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
