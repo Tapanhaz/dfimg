@@ -109,7 +109,6 @@ data = {
 img = df_to_html_img(
         pl.DataFrame(data),
         title= "TEST",
-        content_based_color= True,
         content_based_style= {
                         "String": {
                             "bg-color": "LightCoral", 
@@ -117,7 +116,6 @@ img = df_to_html_img(
                             "font-weight": "bolder"
                             }
                         },
-        cell_highlight= True,
         highlight_conditions= {
                         "Int_col": {
                                 "condition": ">= 20", 

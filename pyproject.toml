@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dfimg"
-version = "0.1.1"
+version = "0.1.2"
 description = "A library to convert polars/ pandas dataframes to image."
 authors = ["Tapanhaz tapanhaz@gmail.com"]
 license = "MIT"
