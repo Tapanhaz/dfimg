@@ -2,7 +2,7 @@
 """
     :description: Pandas / Polars Dataframe to image.
     :author: Tapan Hazarika
-    :created: On Sunday Jan 26, 2025 26:00:39 GMT+05:30
+    :created: On Sunday Jan 26, 2025 16:00:39 GMT+05:30
 """
 __author__ = "Tapan Hazarika"
 
@@ -75,9 +75,8 @@ def df_to_html_img(
         style: dict= {"bg-color": "white", "color": "black", "font-weight": "normal"},
         tbl_style: dict= {"bg-color": "white", "color": "black", "font-weight": "normal"},
         header_style: dict= {"bg-color": "DarkViolet", "color": "white", "font-weight": "bold"},
-        cell_highlight: bool= False,        
         highlight_conditions: dict= {},
-        content_based_color: bool= False, 
+        column_style: dict= {},
         content_based_style: dict= {},
         table_formatting: Literal[
                                 "ASCII_FULL", "ASCII_FULL_CONDENSED", "ASCII_NO_BORDERS", "ASCII_BORDERS_ONLY", 
@@ -142,13 +141,19 @@ def df_to_html_img(
             col_header = headers[idx].text.strip()
             cell_bg_color = None
             cell_font_color = None
-            if content_based_color: 
+            if column_style:
+                col_style = column_style.get(col_header)
+                if col_style:                
+                    cell_bg_color = col_style.get("bg-color", BG_COLOR)
+                    cell_font_color = col_style.get("color", COLOR)
+                    cell_font_weight = col_style.get("font-weight", FONT_WEIGHT)  
+            elif content_based_style: 
                 col_style = content_based_style.get(col_data_type)
                 if col_style:                
                     cell_bg_color = col_style.get("bg-color", BG_COLOR)
                     cell_font_color = col_style.get("color", COLOR)
                     cell_font_weight = col_style.get("font-weight", FONT_WEIGHT)          
-            if cell_highlight:
+            if highlight_conditions:
                 col_condition = highlight_conditions.get(col_header)
                 if col_condition:
                     condition = col_condition["condition"]

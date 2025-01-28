@@ -42,10 +42,11 @@ df_to_html_img:
                                     "color": "white", 
                                     "font-weight": "bold"
                                 }
-        cell_highlight (optional bool): Whether to highlight cells based on conditions.          Default is False.
         highlight_conditions (optional): A dictionary for conditional formatting. 
                                         For example, look below.
-        content_based_color (optional bool): Whether to color cells based on content. Default is False.
+                                        
+        column_style (optional): Dictionary of styles for columns. This will override content_based_style if both are provided.
+
         content_based_style (optional): Dictionary of styles based on content. The style will be applied for all column of same datatype 
 
         Supported keys are "String", "Int", "Float", "Boolean", "Datetime", "Date", "Time" and "Others". For example look below
