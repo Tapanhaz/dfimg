@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="dfimg",
-    version="0.1.2",
+    version="0.1.3",
     author="Tapanhaz",
     author_email="tapanhaz@gmail.com",
     description="A library to convert polars/ pandas dataframes to image.",

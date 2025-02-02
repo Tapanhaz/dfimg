@@ -9,12 +9,15 @@ __author__ = "Tapan Hazarika"
 import base64
 import platform
 import requests
+import warnings
 import polars as pl
 import pandas as pd
 from io import BytesIO
 from typing import Literal
 from bs4 import BeautifulSoup
 from PIL import Image, ImageDraw, ImageFont
+
+warnings.filterwarnings(action= "ignore", category= DeprecationWarning)
 
 BG_COLOR = "white"
 COLOR = "black"
